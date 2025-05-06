@@ -5,6 +5,22 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 body {
   background-color: #ffffff;
   line-height: 1.6;
@@ -21,7 +37,7 @@ nav {
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   color: black;
   margin: 0;
 }
@@ -44,7 +60,7 @@ nav {
 
 .nav-links li {
   margin: 0 15px;
-  font-size: 20px;
+  font-size: 1.25rem;
   border: 2px solid transparent;
   padding: 8px 5px;
   cursor: pointer;
@@ -129,13 +145,13 @@ nav {
 }
 
 .profile-title {
-  font-size: 45px;
+  font-size: 2.25rem;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
 
 .profile-heading {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 0px;
   padding-top: 0px;
 }
@@ -145,8 +161,8 @@ nav {
 }
 
 .text-container p {
-  font-size: 16px;
-  margin: 0px;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  margin: 0;
 }
 
 .text-container a {
@@ -164,7 +180,7 @@ nav {
 }
 
 .section-head {
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -173,7 +189,7 @@ nav {
   text-indent: 6rem;
   width: 90%;
   color: black;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.8;
   text-align: justify;
 }
@@ -203,7 +219,7 @@ nav {
   border: 2px solid transparent;
   padding: 15px;
   border-radius: 14px;
-  font-size: 24px;
+  font-size: 1.5rem;
   display: flex;
   flex-direction: row;
   width: 40%;
@@ -224,7 +240,7 @@ nav {
 
 .course,
 .skills {
-  font-size: 18px;
+  font-size: 1rem;
   text-align: left;
   margin-top: 10px;
 }
@@ -234,17 +250,17 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
   }
-
   .edu-container {
     flex-direction: row;
     width: 90%;
-    align-items: flex-start;
+    align-items: center; /* Vertically centers logo and text */
   }
 
   .edu-logo {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+    object-fit: contain;
   }
 
   .course,
@@ -274,7 +290,7 @@ nav {
 
   .course,
   .skills {
-    font-size: 16px;
+    font-size: 0.95rem;
     text-align: left;
     margin-top: 10px;
   }
@@ -380,12 +396,16 @@ nav {
   border: 2px solid black;
   padding: 12px 20px;
   border-radius: 14px;
-  font-size: 28px;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 40%;
-  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(10px, 4vw, 30px);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
 
 .contact-icons a {
@@ -400,4 +420,44 @@ nav {
   padding: 25px;
   color: white;
   margin-top: 50px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-icons-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 30px 0px;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.skills-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.skill-logo {
+  width: clamp(60px, 8vw, 100px);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-icons-con {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    flex-wrap: wrap;
+  }
 }

@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import Education from "./Components/Education";
 import Projects from "./Components/Projects";
+import Skills from "./Components/Skills";
 import "./App.css";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Navbar />
       <Profile />
       <Education />
+      <Skills />
       <Projects />
       <Contact />
       <Footer />
