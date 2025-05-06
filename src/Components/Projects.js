@@ -8,7 +8,7 @@ const Projects = () => {
       <h1> Projects </h1>
       <div className="projects">
         <div className="project1">
-          <a href="">
+          <a href="https://github.com/Tharunteja-pellakuru/Taskify.git">
             <h2 style={{ textAlign: "center" }}> Taskify App</h2>
           </a>
           <img className="project-img" src={Project1} alt="Project1" />
@@ -25,7 +25,7 @@ const Projects = () => {
           </div>
         </div>{" "}
         <div className="project1">
-          <a href="">
+          <a href="https://github.com/Tharunteja-pellakuru/B-Store-App.git">
             <h2 style={{ textAlign: "center" }}> B-Store App</h2>
           </a>
           <img className="project-img" src={Project2} alt="Project1" />
