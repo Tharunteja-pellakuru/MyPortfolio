@@ -200,6 +200,7 @@ nav {
   font-weight: bold;
 }
 
+/* Education Section */
 .education-conatiner {
   display: flex;
   flex-direction: column;
@@ -247,97 +248,40 @@ nav {
   margin-top: 10px;
 }
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  margin: 40px auto;
-  gap: 24px;
-  width: 95%;
-  max-width: 850px;
+@media screen and (max-width: 1024px) {
+  .education-conatiner .education-con {
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center;
+  }
+
+  .edu-logo {
+    margin-right: 0;
+    margin-bottom: 15px; /* Add space between the image and text */
+    width: 120px;
+    height: 120px;
+  }
+
+  .edu-container {
+    width: 100%;
+    flex-direction: column; /* Stack image and text in column */
+  }
+
+  .edu-container .course,
+  .edu-container .skills {
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 10px;
+  }
 }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .edu-logo {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-.project1 {
-  flex: 1 1 260px;
-  border-radius: 10px;
-  padding: 20px; /* Added padding for the container */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 350px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-title {
-  text-decoration: none; /* Remove underline from the project title */
-}
-
-.project-img {
-  width: 85%;
-  height: auto;
-  border-radius: 8px;
-  align-self: center;
-}
-
-.project-text-container {
-  display: flex;
-  flex-direction: column;
-  text-align: justify;
-  font-size: 14px;
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 60px 0px;
-  padding: 20px;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.contact-icons {
-  padding: 12px 20px;
-  border-radius: 14px;
-  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: clamp(10px, 4vw, 30px);
-  width: 100%;
-  max-width: 400px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-icons a {
-  color: black;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: grey;
-  padding: 25px;
-  color: white;
-  margin-top: 50px;
-}
-
+/* Skills Section */
 .skills-container {
   display: flex;
   flex-direction: column;
@@ -367,6 +311,31 @@ nav {
   object-fit: contain;
   display: block;
   margin-right: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .skills-icons-con {
+    flex-direction: column; /* Stack the icons vertically */
+    align-items: center;
+  }
+
+  .skills-icon {
+    margin: 10px 0; /* Add some spacing between each skill icon */
+  }
+
+  .skill-logo {
+    width: clamp(60px, 8vw, 80px); /* Adjust size for small screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .skills-icon {
+    margin: 10px 0;
+  }
+
+  .skill-logo {
+    width: clamp(60px, 10vw, 80px); /* Further reduce size on smaller screens */
+  }
 }
 
 .certifications-container {
@@ -442,6 +411,99 @@ nav {
   .certification-icon {
     flex: 0 0 90%; /* 1 item per row */
   }
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin: 40px auto;
+  gap: 24px;
+  width: 95%;
+  max-width: 850px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.project1 {
+  flex: 1 1 260px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+  text-decoration: none;
+}
+
+.project-img {
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.project-text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  font-size: 14px;
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0px;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-icons {
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(10px, 4vw, 30px);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icons a {
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: grey;
+  padding: 25px;
+  color: white;
+  margin-top: 50px;
 }
 
 /* Default box shadow containers */
