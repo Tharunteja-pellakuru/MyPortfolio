@@ -1,0 +1,403 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+nav {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  background-color: #f8f8f8;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+}
+
+.heading:hover {
+  color: rgb(20, 111, 196);
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  padding: 8px 5px;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: rgb(20, 111, 196);
+  border-bottom: 2px solid rgb(20, 111, 196);
+}
+
+@media screen and (max-width: 1023px) {
+  .menu {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: none;
+    z-index: 999;
+    width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+
+  .nav-links li {
+    margin: 0 15px;
+  }
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  padding: 30px;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid black;
+  padding: 6px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.profile-title {
+  font-size: 45px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.profile-heading {
+  font-size: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.profile-heading:hover {
+  color: rgb(20, 111, 196);
+}
+
+.text-container p {
+  font-size: 16px;
+  margin: 0px;
+}
+
+.text-container a {
+  color: rgb(60, 120, 225);
+  text-decoration: none;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 20px;
+  padding: 30px;
+}
+
+.section-head {
+  font-size: 40px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.about-text {
+  text-indent: 6rem;
+  width: 90%;
+  color: black;
+  font-size: 24px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.about-text span {
+  font-weight: bold;
+}
+
+.education-conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0px;
+  padding: 20px;
+}
+
+.education-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.edu-container {
+  border: 2px solid transparent;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  gap: 20px;
+  transition: border 0.3s ease;
+  align-items: flex-start;
+}
+
+.edu-container:hover {
+  border: 2px solid black;
+}
+
+.edu-logo {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.course,
+.skills {
+  font-size: 18px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .education-con {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .edu-container {
+    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .edu-logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+
+  .course,
+  .skills {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .education-con {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .edu-container {
+    flex-direction: row;
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .edu-logo {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+  }
+
+  .course,
+  .skills {
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 60px auto;
+  gap: 30px;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.project1 {
+  flex: 1;
+  min-width: 0;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  gap: 15px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.project-text-container {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .projects {
+    justify-content: center;
+  }
+
+  .project1 {
+    width: 80%;
+  }
+
+  .project-img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project1 {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .project-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .project1 {
+    width: 48%;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0px;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-icons {
+  border: 2px solid black;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-size: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 40%;
+  gap: 20px;
+}
+
+.contact-icons a {
+  color: black;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: grey;
+  padding: 25px;
+  color: white;
+  margin-top: 50px;
+}
