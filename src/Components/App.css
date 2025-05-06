@@ -301,39 +301,38 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  margin: 60px auto;
-  gap: 30px;
-  width: 80%;
-  max-width: 1200px;
+  padding: 16px;
+  margin: 40px auto;
+  gap: 24px;
+  width: 95%;
+  max-width: 850px; /* smaller than before */
 }
 
 .projects {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
   width: 100%;
-  gap: 20px;
-  flex-wrap: nowrap;
 }
 
 .project1 {
-  flex: 1;
-  min-width: 0;
-  border: 2px solid black;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 10px;
-  gap: 15px;
-  align-self: stretch;
+  flex: 1 1 260px;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-img {
-  width: 100%;
+  width: 85%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   align-self: center;
 }
 
@@ -341,6 +340,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: justify;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
@@ -459,5 +459,80 @@ nav {
     flex-direction: row;
     width: 90%;
     flex-wrap: wrap;
+  }
+}
+
+.certifications-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.certifications-icons-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.certification-icon {
+  border: 2px solid #000;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 18px;
+  min-width: 200px;
+}
+
+.certificate-info {
+  text-align: center;
+}
+
+.certificate-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certificate-source {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.certificate-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1200px) {
+  .certification-icon {
+    flex: 0 0 18%; /* 5 items per row */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .certification-icon {
+    flex: 0 0 30%; /* 3 items per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certification-icon {
+    flex: 0 0 45%; /* 2 items per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .certification-icon {
+    flex: 0 0 90%; /* 1 item per row */
   }
 }
